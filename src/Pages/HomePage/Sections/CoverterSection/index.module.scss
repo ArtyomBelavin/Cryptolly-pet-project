@@ -1,0 +1,147 @@
+.converterSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 49px;
+  font-weight: 700;
+  font-family: "Sofia Pro";
+  line-height: 1.1;
+  color: #fff;
+  max-width: 568px;
+}
+
+.descr {
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: #e5e6ed;
+  max-width: 544px;
+  margin-bottom: 1.5rem;
+}
+
+.converterContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: rgba(37, 41, 44, 0.5);
+  border-radius: 1.25rem;
+  gap: 1.75rem;
+  position: relative;
+  backdrop-filter: blur(16px); /* Размытие заднего фона */
+  -webkit-backdrop-filter: blur(16px); /* Для Safari */
+  margin-bottom: 7rem;
+}
+
+.bgCard {
+  position: absolute;
+  transform: translate(-170px, 120px);
+}
+
+.containerHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.125rem;
+  gap: 12rem;
+}
+
+.activeBtn {
+  color: #1a82ff;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+}
+
+.Btn {
+  background-color: transparent;
+  border: none;
+  color: #5d6588;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.converterTitle {
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.converterDescr {
+  font-size: 20px;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+
+  span {
+    color: #a5adcf;
+  }
+}
+
+.inputContainer {
+  background-color: #34384c;
+  border: 1px solid #4a4c55;
+  border-radius: 1.25rem;
+}
+
+.input {
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  line-height: 1.5rem;
+  color: #fff;
+}
+
+.select {
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid #4a4c55;
+  cursor: pointer;
+  padding-left: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #fff;
+  font-family: "Sofia Pro";
+
+  option {
+    background-color: #4a4c55;
+    border: none;
+  }
+}
+
+.buyNowBtn {
+  padding: 1.25rem 0;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  background-color: rgb(30, 104, 246);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgb(120, 104, 246);
+  }
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  p {
+    color: #5d6588;
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+}

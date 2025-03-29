@@ -3,6 +3,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  margin-bottom: 7.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../../../../Assets/image/bgLines-1.png");
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(100px);
+    background-repeat: no-repeat;
+    background-position: top right;
+    opacity: 0.5;
+    z-index: -1;
+    animation: animateBG 2s ease-in-out infinite;
+  }
 }
 
 .title {
@@ -27,9 +43,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
 
   & > :nth-child(2) {
     margin-top: 3.25rem;
+  }
+}
+
+@keyframes animateBG {
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 592px) {
+  .platformContainer {
+    & > :nth-child(2) {
+      margin: 0;
+    }
   }
 }
