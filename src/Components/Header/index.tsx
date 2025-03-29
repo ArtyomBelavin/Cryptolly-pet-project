@@ -41,7 +41,9 @@ export const Header: React.FC = () => {
         <ul className={styles.headerNavList}>
           {navList.map((item) => (
             <li key={item.id} className={styles.headerNavListItem}>
-              <Link to="/">{item.text}</Link>
+              <Link className={styles.link} to="/">
+                {item.text}
+              </Link>
             </li>
           ))}
         </ul>

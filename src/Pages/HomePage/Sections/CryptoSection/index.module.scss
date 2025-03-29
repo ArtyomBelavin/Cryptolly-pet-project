@@ -1,0 +1,98 @@
+.cryptoSecion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1px;
+  margin-bottom: 7.5rem;
+}
+
+.cryptoCard {
+  background-color: rgba(47, 50, 65, 0.5);
+  padding: 25px;
+  width: 346px;
+  text-align: center;
+}
+
+.cryptoHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  &Text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.title {
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: #a5adcf;
+}
+
+.cryptoImage {
+  width: 44px;
+  height: 44px;
+}
+
+.price {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.5rem;
+}
+
+.positive {
+  color: #11cabe;
+}
+
+.negative {
+  color: #fa2256;
+}
+
+.positive,
+.negative {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5rem;
+}
+
+.chart {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.arrowContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cryptoCardView {
+  display: flex;
+  background-color: rgba(47, 50, 65, 0.5);
+  padding: 25px;
+  width: 346px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 1;
+}
+
+.cryptoCardLink {
+  color: #fff;
+  font-family: "Sofia Pro";
+  padding: 12px 24px;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+  background-color: rgb(47, 50, 65);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgb(88, 89, 95);
+  }
+}

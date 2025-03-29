@@ -1,6 +1,14 @@
 import React from "react";
-import styles from "./index.module.scss";
+import { HomeSection } from "./Sections/HomeSection";
+import { CryptoSection } from "./Sections/CryptoSection";
+import { PlatformSection } from "./Sections/PlatformSection";
 
 export const HomePage: React.FC = () => {
-  return <section className={styles.HomepageSection}></section>;
+  return (
+    <>
+      <HomeSection />
+      <CryptoSection />
+      <PlatformSection />
+    </>
+  );
 };
