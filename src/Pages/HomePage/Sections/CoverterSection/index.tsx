@@ -2,7 +2,17 @@ import React, { useEffect, useState } from "react";
 import styles from "./index.module.scss";
 import { useCryptoStore } from "../../../../Store/useCryptoStore";
 import bgCard from "../../../../Assets/image/bgCard.png";
-import payment from "../../../../Assets/image/payment.png";
+import Mastercard from "../../../../Assets/vectors/mastercard.svg";
+import Visa from "../../../../Assets/vectors/visa.svg";
+import Apple from "../../../../Assets/vectors/apple.svg";
+import Google from "../../../../Assets/vectors/google.svg";
+import Paypal from "../../../../Assets/vectors/paypal.svg";
+
+type ImagePayment = {
+  id: number;
+  img: string;
+  name: string;
+};
 
 export const ConverterSection: React.FC = () => {
   const { cryptos, fetchCryptos } = useCryptoStore();
@@ -45,6 +55,34 @@ export const ConverterSection: React.FC = () => {
   const toCryptoImage = toCrypto ? toCrypto.image : "";
   const toCryptoName = toCrypto ? toCrypto.name : "Unknown";
   const toCryptoPrice = toCrypto ? toCrypto.price.toFixed(2) : "0.00";
+
+  const ImagePayment: ImagePayment[] = [
+    {
+      id: 0,
+      img: Mastercard,
+      name: "Mastercard",
+    },
+    {
+      id: 1,
+      img: Visa,
+      name: "Visa",
+    },
+    {
+      id: 2,
+      img: Apple,
+      name: "Apple",
+    },
+    {
+      id: 3,
+      img: Google,
+      name: "Google",
+    },
+    {
+      id: 4,
+      img: Paypal,
+      name: "Paypal",
+    },
+  ];
 
   return (
     <section className={styles.converterSection}>
@@ -130,7 +168,11 @@ export const ConverterSection: React.FC = () => {
 
       <div className={styles.payment}>
         <p>We accept payment with many methods:</p>
-        <img src={payment} alt="payment" />
+        <div className={styles.imgContainer}>
+          {ImagePayment.map((img) => (
+            <img key={img.id} src={img.img} alt={img.name} />
+          ))}
+        </div>
       </div>
     </section>
   );
