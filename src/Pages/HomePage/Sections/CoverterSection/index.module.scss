@@ -86,9 +86,12 @@
 }
 
 .inputContainer {
+  display: flex;
   background-color: #34384c;
   border: 1px solid #4a4c55;
   border-radius: 1.25rem;
+  align-items: center;
+  text-align: center;
 }
 
 .input {
@@ -150,4 +153,9 @@
     gap: 2rem;
     align-items: center;
   }
+}
+
+.cryptoImg {
+  width: 44px;
+  padding-right: 1rem;
 }

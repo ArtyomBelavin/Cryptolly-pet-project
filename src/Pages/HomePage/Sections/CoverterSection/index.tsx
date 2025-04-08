@@ -123,7 +123,11 @@ export const ConverterSection: React.FC = () => {
             onChange={(e) => setAmount(Number(e.target.value))}
           />
           {fromCryptoImage && (
-            <img width={24} src={fromCryptoImage} alt={fromCryptoName} />
+            <img
+              className={styles.cryptoImg}
+              src={fromCryptoImage}
+              alt={fromCryptoName}
+            />
           )}
           <select
             className={styles.select}
@@ -146,7 +150,12 @@ export const ConverterSection: React.FC = () => {
             disabled
           />
           {toCryptoImage && (
-            <img width={24} src={toCryptoImage} alt={toCryptoName} />
+            <img
+              className={styles.cryptoImg}
+              width={24}
+              src={toCryptoImage}
+              alt={toCryptoName}
+            />
           )}
           <select
             className={styles.select}

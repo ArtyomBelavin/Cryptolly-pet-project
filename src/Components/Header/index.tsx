@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./index.module.scss";
 import { Link } from "react-router-dom";
 
@@ -8,6 +8,12 @@ type navList = {
 };
 
 export const Header: React.FC = () => {
+  const [active, setActive] = useState<boolean>(false);
+
+  const handleActiveTab = () => {
+    setActive(!active);
+  };
+
   const navList: navList[] = [
     {
       id: 0,
@@ -56,6 +62,26 @@ export const Header: React.FC = () => {
         <Link className={styles.headerGetStarted} to="/">
           Get Started
         </Link>
+      </div>
+
+      <button onClick={handleActiveTab} className={styles.headerBtnsBurger}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div
+        className={
+          active ? styles.headerNavBurgerActive : styles.headerNavBurger
+        }
+      >
+        <ul>
+          {navList.map((item) => (
+            <li key={item.id}>
+              <Link to="">{item.text}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </header>
   );
